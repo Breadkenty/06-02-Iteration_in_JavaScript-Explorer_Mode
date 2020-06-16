@@ -27,6 +27,9 @@
  */
 
 // ...
+const yelling = array => {
+  return array.map(word => word.toUpperCase())
+}
 
 /**
  *
@@ -36,6 +39,9 @@
  */
 
 // ...
+const doubleTrouble = array => {
+  return array.map(number => number * 2)
+}
 
 /*
  * 3) Define a function stringyIndexes() that takes an array of
@@ -44,6 +50,9 @@
  */
 
 // ...
+const stringyIndexes = array => {
+  return array.map((word, index) => `${word} is at index ${index}`)
+}
 
 /*
  * 4) Define a function onlyTheEvenSurvive that accepts an array of
@@ -51,6 +60,9 @@
  */
 
 // ...
+const onlyTheEvenSurvive = array => {
+  return array.filter(number => number % 2 === 0)
+}
 
 /*
  * 5) Define a function onlyTheEvenIndexedSurvive that accepts an array of
@@ -58,6 +70,9 @@
  */
 
 // ...
+const onlyTheEvenIndexedSurvive = array => {
+  return array.filter((number, index) => index % 2 === 0)
+}
 
 /*
  * 6)  Define a function bestMoviesOfTheYear that accepts an array of
@@ -74,6 +89,11 @@
  */
 
 // ...
+const bestMoviesOfTheYear = (array, year) => {
+  return array
+    .filter(movie => movie.score > 90 && movie.year === year)
+    .map(movie => movie.name)
+}
 
 /*
  * 7) Define a function everyoneIsOdd that accepts an array of
@@ -82,6 +102,9 @@
  */
 
 // ...
+const everyoneIsOdd = array => {
+  return array.every(number => number % 2 === 1)
+}
 
 /*
  * 8) Define a function findTheNeedle that accepts an array of
@@ -90,6 +113,9 @@
  */
 
 // ...
+const findTheNeedle = array => {
+  return array.find(string => string.includes('needle'))
+}
 
 /*
  * 9) Define a function findTheNeedleIndex that accepts an array of
@@ -98,6 +124,9 @@
  */
 
 // ...
+const findTheNeedleIndex = array => {
+  return array.findIndex(string => string.includes('needle'))
+}
 
 /*
  *` 10)  Define a function someoneToLove that accepts an array of
@@ -106,6 +135,9 @@
  */
 
 // ...
+const someoneToLove = array => {
+  return array.some(string => string.length === 4)
+}
 
 /*
  * 11) Define a function mapYourself that accepts an array of
@@ -117,6 +149,13 @@
  */
 
 // ...
+// const mapYourself = array => {
+//   let newArray = []
+//   for (var index = 0; index < array.length; index++) {
+//     newArray = newArray.push(array[index] * 2)
+//   }
+//   return newArray
+// }
 
 /*
  * 12) Define a function filterYourself that accepts an
@@ -129,6 +168,7 @@
  */
 
 // ...
+// const filterYourself = array => {}
 
 /*
  * 13) Define a function everyYourself that accepts an
