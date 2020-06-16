@@ -149,13 +149,13 @@ const someoneToLove = array => {
  */
 
 // ...
-// const mapYourself = array => {
-//   let newArray = []
-//   for (var index = 0; index < array.length; index++) {
-//     newArray = newArray.push(array[index] * 2)
-//   }
-//   return newArray
-// }
+const mapYourself = array => {
+  let newArray = []
+  for (var index = 0; index < array.length; index++) {
+    newArray.push(array[index] * 2)
+  }
+  return newArray
+}
 
 /*
  * 12) Define a function filterYourself that accepts an
@@ -168,7 +168,15 @@ const someoneToLove = array => {
  */
 
 // ...
-// const filterYourself = array => {}
+const filterYourself = array => {
+  let newArray = []
+  for (var index = 0; index < array.length; index++) {
+    if (array[index] % 2 === 0) {
+      newArray.push(array[index])
+    }
+  }
+  return newArray
+}
 
 /*
  * 13) Define a function everyYourself that accepts an
@@ -181,6 +189,16 @@ const someoneToLove = array => {
  */
 
 // ...
+
+const everyYourself = array => {
+  let everyNumberIsEven = true
+  for (var index = 0; index < array.length; index++) {
+    if (array[index] % 2 === 1) {
+      everyNumberIsEven = false
+    }
+  }
+  return everyNumberIsEven
+}
 
 /**
  * NOTE: Don't modify anything below this line...
@@ -379,12 +397,10 @@ test('Function Check - filter yourself', t =>
   ensureDefined(t, 'filterYourself'))
 test('filterYourself()', t => {
   const original = Array.prototype.filter
-
   Array.prototype.filter = () => []
-
-  t.deepEqual(filterYourself([8, 1, 2, 3]), [8, 2])
-
+  const result = filterYourself([8, 1, 2, 3])
   Array.prototype.filter = original
+  t.deepEqual(result, [8, 2])
 })
 
 test('Function Check - Every Yourself', t => ensureDefined(t, 'everyYourself'))
